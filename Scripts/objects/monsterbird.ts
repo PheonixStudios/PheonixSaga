@@ -25,10 +25,14 @@ module objects {
         this.verticalSpeed = 5;
         this._reset();
       }
+
+      public Reset(): void {
+        this._reset();
+      }
   
       private _updatePosition():void {
         this.y += this.verticalSpeed;
-        this.position.x =this.x;
+        this.position.x = this.x;
         this.position.y = this.y;
       }
   
