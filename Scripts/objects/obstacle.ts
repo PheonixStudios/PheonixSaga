@@ -13,14 +13,18 @@ module objects {
       private _reset():void {
         this.y = -this.height;
         this.x = (Math.random() * (640-this.width))+this.halfWidth;
-        this.verticalSpeed = (Math.random() * 5) + 5;
-        this.horizontalSpeed = (Math.random() *4) -2;
+        this.verticalSpeed = (Math.random() * 4) + 5;
+        this.horizontalSpeed = (Math.random() * 3) -2;
       }
   
       private _checkBounds():void {
         if(this.y >= 600 + this.height) {
           this._reset();
         }
+      }
+
+      public Reset(): void {
+        this._reset();
       }
   
       // PUBLIC METHODS

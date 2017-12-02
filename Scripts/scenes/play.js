@@ -130,6 +130,7 @@ var scenes;
                     // }
                     if (other.name == "obstacle") {
                         this._lives -= 1;
+                        other.Reset();
                         if (this._lives <= 0) {
                             this._currentScene = config.END;
                             this._engineSound.stop();

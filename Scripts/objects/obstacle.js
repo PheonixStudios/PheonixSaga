@@ -24,13 +24,16 @@ var objects;
         Obstacle.prototype._reset = function () {
             this.y = -this.height;
             this.x = (Math.random() * (640 - this.width)) + this.halfWidth;
-            this.verticalSpeed = (Math.random() * 5) + 5;
-            this.horizontalSpeed = (Math.random() * 4) - 2;
+            this.verticalSpeed = (Math.random() * 4) + 5;
+            this.horizontalSpeed = (Math.random() * 3) - 2;
         };
         Obstacle.prototype._checkBounds = function () {
             if (this.y >= 600 + this.height) {
                 this._reset();
             }
+        };
+        Obstacle.prototype.Reset = function () {
+            this._reset();
         };
         // PUBLIC METHODS
         Obstacle.prototype.Start = function () {
