@@ -35,6 +35,9 @@ var objects;
             this.verticalSpeed = 5;
             this._reset();
         };
+        MonsterBird.prototype.Reset = function () {
+            this._reset();
+        };
         MonsterBird.prototype._updatePosition = function () {
             this.y += this.verticalSpeed;
             this.position.x = this.x;
